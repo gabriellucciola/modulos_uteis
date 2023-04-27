@@ -45,7 +45,7 @@ def receber_bool(mensagem, error=False):
     :return: o valor digitado como um booleano"""
     while True:
         valor = input(f'{mensagem}')
-        if valor == "True" or valor == False:
+        if valor == "True" or valor == "False":
             return bool(valor)
         if error:
             print(f"\033[91mERRO! Esta entrada deve ser \"True\" ou \"False\"!\033[m")
