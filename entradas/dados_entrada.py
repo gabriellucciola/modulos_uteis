@@ -36,7 +36,7 @@ def receber_str(mensagem):
     return msg
 
 
-def receber_bool(mensagem):
+def receber_bool(mensagem, error=False):
     """Recebe um valor e verifica se é um booleano
     Se o valor não for booleano solicita novamente
     :param: mensagem = mostra uma mensagem para o usuário orientando o que deve digitar
@@ -47,6 +47,6 @@ def receber_bool(mensagem):
         valor = input(f'{mensagem}')
         if valor == "True" or valor == False:
             return bool(valor)
-        else:
+        if error:
             print(f"\033[91mERRO! Esta entrada deve ser \"True\" ou \"False\"!\033[m")
 
